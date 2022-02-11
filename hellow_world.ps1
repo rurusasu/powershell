@@ -1,12 +1,12 @@
 $ErrorActionPreference = "stop"
 
 try {
-    $ result = choco
-    echo $result
+  $result = choco
+  Write-Output $result
 }
-catch{
-    #echo "catch!!"
-    echo $Error[0]
+catch {
+  Write-Output "catch!!"
+  Write-Output $Error[0]
 }
 
 

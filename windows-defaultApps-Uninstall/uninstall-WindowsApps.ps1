@@ -1,4 +1,12 @@
-﻿# DropboxOEM
+﻿# Copyright (c) 2022 astherier
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+#
+#uninstall-WindowsApps.ps1
+#Windowsを初回インストールした時に自動インストールされる不要なアプリを削除するスクリプト
+#最終更新：2022/02/10
+
+# DropboxOEM
 Get-AppxPackage C27EB4BA.DropboxOEM* | Remove-AppxPackage -ErrorAction SilentlyContinue
 
 # Game: DragonManiaLegends
@@ -38,7 +46,7 @@ Get-AppxPackage Microsoft.MicrosoftSolitaireCollection* | Remove-AppxPackage -Er
 # Get-AppxPackage Microsoft.MSPaint | Remove-AppxPackage -ErrorAction SilentlyContinue
 
 # OneNote
-Get-AppxPackage Microsoft.Office.OneNote* | Remove-AppxPackage -ErrorAction SilentlyContinue
+# Get-AppxPackage Microsoft.Office.OneNote* | Remove-AppxPackage -ErrorAction SilentlyContinue
 
 # OneConnect
 Get-AppxPackage Microsoft.OneConnect* | Remove-AppxPackage -ErrorAction SilentlyContinue
