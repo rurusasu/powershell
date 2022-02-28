@@ -47,7 +47,8 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
   exit
 }
 
-WindowsUpdate
+# WindowsUpdate の更新一覧を表示する．
+# WindowsUpdate
 
 # 再起動の必要がない場合は更新を行う．
 $res = Get-WURebootStatus
@@ -55,11 +56,13 @@ if ( - ! $res.RebootRequired) {
   Write-Host "再起動の必要がない更新パッケージが存在しました．"
   Write-Host "アップデートを行います．"
   Install-WindowsUpdate -AcceptAll
+  Write-Host "アップデートが終了しました．"
 }
 
 # 更新履歴を表示する
-$res = Get-WUhistory
-Write-Host $res
+# 注意，この操作を行うと画面が固まる．
+# $res = Get-WUhistory
+# Write-Host $res
 
 # デバッグ用に、閉じる前に止める。
-Pause
+# Pause
